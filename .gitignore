@@ -1,16 +1,24 @@
+# Ignore virtual environment directories
+.venv/
+.VSCodeCounter/
+
+# Ignore Python bytecode files
+__pycache__/
+*.pyc
+
+# Ignore uploads directory
+uploads/
+
+# Ignore IDE/editor files (e.g., VS Code settings)
+.vscode/
+
+# Node.js dependencies
+node_modules/
+
+# Ignore system files (e.g., macOS)
 .DS_Store
 
-# ignore build/dist folder
-/dist
-/build
-
-# ignore node_modules folder
-/node_modules
-
-# ignore .env file
-.env
-
-# egg-info
-*.egg-info
-
-__pycache__/
+# Ignore environment files
+.gitIgnore
+build.txt
+.dockerignore
