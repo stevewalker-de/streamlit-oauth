@@ -1,3 +1,4 @@
+#_init_.ph
 import os
 import streamlit.components.v1 as components
 import asyncio
@@ -87,7 +88,10 @@ class OAuth2Component:
       extras_params=extras_params
     ))
 
-    # print(f'generated authorize request: {authorize_request}')
+
+    print(f"✅ Generated Authorize URL: {authorize_request}")
+
+
 
     result = _authorize_button(
       authorization_url=authorize_request,
@@ -99,7 +103,9 @@ class OAuth2Component:
       use_container_width=use_container_width,
       auto_click=auto_click,
     )
-    # print(f'result: {result}')
+
+
+    print(f"✅ Result from frontend: {result}")
 
     if result:
       try:
