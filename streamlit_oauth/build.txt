@@ -1,0 +1,11 @@
+python3 -m venv .venv
+source .venv/bin/activate
+gcloud auth login
+gcloud auth application-default login
+gcloud config set project bp-steveswalker-solutions-303
+gcloud auth application-default login \
+  --scopes="https://www.googleapis.com/auth/spreadsheets,https://www.googleapis.com/auth/cloud-platform,https://www.googleapis.com/auth/documents,https://www.googleapis.com/auth/drive"
+gcloud components update
+/Users/steveswalker/code/da-tco-app/.venv/lib/python3.12/site-packages/vertexai/preview/reasoning_engines/templates/
+
+gcloud alpha run deploy dev-mugsy --source . --iap --service-account 'da-tco-app@bp-steveswalker-solutions-303.iam.gserviceaccount.com' --project bp-steveswalker-solutions-303 --region us-central1 --no-allow-unauthenticated --set-env-vars REDIRECT_URI="https://dev-mugsy-119408220431.us-central1.run.app" 
